@@ -3,6 +3,8 @@ import { View, Text, Image, TextInput, ScrollView } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { ChevronDownIcon, UserIcon, AdjustmentsVerticalIcon, MagnifyingGlassIcon } from "react-native-heroicons/outline";
+import Categories from '../components/Categories';
+import FeaturedRow from '../components/FeaturedRow';
 
 const HomeScreens = () => {
     const navigation = useNavigation()
@@ -41,8 +43,28 @@ const HomeScreens = () => {
             </View>
             <AdjustmentsVerticalIcon size={30} color="#00ccbb"/>
         </View>
-        <ScrollView className="mt-4">
-            
+        <ScrollView 
+            className="bg-gray-100"
+            contentContainerStyle={{
+                paddingBottom: 100,
+            }}
+        >
+            <Categories />
+            <FeaturedRow
+                title="Featured"
+                desc="The best of the best"
+                featuredCategory="featured"
+            />
+            <FeaturedRow
+                title="Featured"
+                desc="The best of the best"
+                featuredCategory="featured"
+            />
+            <FeaturedRow
+                title="Featured"
+                desc="The best of the best"
+                featuredCategory="featured"
+            />
         </ScrollView>
     </SafeAreaView>
   )
