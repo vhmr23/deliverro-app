@@ -14,7 +14,7 @@ export default defineType({
       name: 'short_description',
       type: 'string',
       title: 'Short Description',
-      validation: (Rule) => Rule.max(200),
+      validation: (Rule) => Rule.max(400),
     }),
     defineField({
       name: 'image',
